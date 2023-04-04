@@ -1,0 +1,102 @@
+<body>
+
+    <header>
+
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container">
+                <a href="rickAndMorty" class="navbar-brand d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2"
+                        viewBox="0 0 24 24">
+                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                        <circle cx="12" cy="13" r="4" />
+                    </svg>
+                    <strong>Album</strong>
+                </a>
+
+                <div class="col-lg-6 text-end ">
+                    <div class="d-inline-flex align-items-center text-white">
+                        <span class="me-2 fw-semi-bold" style=" font-size: 20px;">
+                            <a  href="https://github.com/bandicoot635" target="_blank" style="border: 0px; background-color: transparent; color: aliceblue;">
+                                <i class="bi bi-github mx-2"></i> 
+                            </a>
+                            <a  href="https://www.linkedin.com/in/yairlopez/" target="_blank" style="border: 0px; background-color: transparent; color: aliceblue;">
+                                <i class="bi bi-linkedin mx-2"></i>
+                            </a>
+                            <a  href="https://www.instagram.com/bandicot635/" target="_blank" style="border: 0px; background-color: transparent; color: aliceblue;">
+                                <i class="bi bi-instagram mx-2"></i>
+                            </a>
+                        </span> 
+                    </div>
+                </div>
+    
+               
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="py-5 text-center container">
+            <div class="row py-lg-5" id="inicio">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light display-3 text-white">Rick y Morty Album</h1>
+                    <p class="lead text-muted">
+                        Bienvenidos a Rick y Morty Album, un proyecto inspirado en la popular serie de animación "Rick y
+                        Morty" <br>
+                        ¡Que comience la aventura wubba lubba dub dub!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="container ">
+            <div class="row">
+
+                <div class="col-lg-6 mx-auto" *ngFor="let personaje of personajes| 
+                paginate: { itemsPerPage: pageSize, currentPage: currentPage, totalItems: totalItems }">
+                    <div class="card mb-3 text-white bg-dark" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img [src]="personaje.image" class="img-fluid rounded-start w-100 h-auto" alt="personaje">
+                            </div>
+
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title card-header border-white ">{{personaje.name}}</h5>
+
+                                    <p class="card-text mt-3" [ngClass]="getStatusClass(personaje.status)">
+                                        {{personaje.species}} - {{personaje.status}}
+                                    </p>
+
+                                    <p class="card-text text-muted">Lugar de origen: {{personaje.origin.name}}</p>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center my-5">
+                <pagination-controls (pageChange)="page = $event; obtenerPersonajes(page)"></pagination-controls>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="text-muted py-3" style="background-color: #212529;">
+        <div class="container">
+            <p class="float-end mb-1">
+                <a  href="#inicio" style="border: 0px; background-color: transparent; color: aliceblue;">
+                    <i class="bi bi-arrow-up-circle"></i>
+                </a>
+            </p>
+            <p class="mb-1  m-0">Copyright © 2023 Rick and Morty Album, Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>

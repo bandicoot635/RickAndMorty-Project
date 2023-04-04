@@ -1,0 +1,39 @@
+body {
+    background-color: #000000;
+    /* min-height: 100vh; */
+}
+
+.text-success {
+    color: #007F3F;
+}
+
+.text-danger {
+    color: #DC143C;
+}
+
+.text-wanring {
+    color: gold;
+}
+
+@import '~ngx-pagination/dist/themes/default.theme.css';
+
+.bi-arrow-up-circle {
+    font-size: 25px;
+}
+
+
+.card {
+    animation: scale-up-left 0.5s;
+}
+
+@keyframes scale-up-left {
+    0% {
+        transform: scale(.5);
+        transform-origin: left center
+    }
+
+    100% {
+        transform: scale(1);
+        transform-origin: left center
+    }
+}
