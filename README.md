@@ -1,27 +1,45 @@
-# RickAndMortyApi
+# Rick and Morty Characters Webpage
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.8.
+This project is an Angular webpage that uses the public Rick and Morty API to display all characters from the show.
 
-## Development server
+## Development
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+To run the project in a development environment, follow these steps:
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone this repository to your local machine: `git clone https://github.com/bandicoot635/RickAndMorty-Project.git`
+2. Navigate to the project directory: `cd rickAndMortyApi`
+3. Install dependencies: `npm install`
+4. Run the development server: `ng serve`
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To build the project for production, run `ng build`. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Testing
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To run unit tests, run `ng test`. The tests will be executed via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+To run end-to-end tests, run `ng e2e`. To use this command, you first need to add a package that implements end-to-end testing capabilities.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## API
 
-## Further help
+This project uses the [Rick and Morty API](https://rickandmortyapi.com/) to retrieve data about characters.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Features
+
+- Displays a complete list of all characters from the show
+- Allows searching characters by name
+- Provides full details of each character, including their image, species, gender, and place of origin.
+
+## Contributing
+
+If you would like to contribute to this project, you are more than welcome! Please follow these steps:
+
+1. Fork this repository
+2. Clone the fork to your local machine: `git clone https://github.com/bandicoot635/RickAndMorty-Project.git`
+3. Create a branch for your feature: `git checkout -b my-new-feature`
+4. Implement your feature and make any necessary changes
+5. Push your branch to your fork: `git push origin my-new-feature`
+6. Create a pull request in this repository.
+
+
